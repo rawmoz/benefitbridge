@@ -1,0 +1,15 @@
+{
+  "_note": "Statewide California programs. Fill in rules from official sources; every entry needs source_url and last_verified.",
+  "programs": [
+    {
+      "id": "calfresh",
+      "name": "CalFresh",
+      "category": "food",
+      "rules": { "income_limit_pct_fpl": null },
+      "docs_needed": [],
+      "apply_url": null,
+      "source_url": null,
+      "last_verified": null
+    }
+  ]
+}
