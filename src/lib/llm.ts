@@ -36,5 +36,6 @@ export async function complete(system: string, messages: ChatMessage[], maxToken
   });
   if (!res.ok) throw new Error(`Inference error ${res.status}: ${await res.text()}`);
   const data = await res.json();
-  return data.choices?.[0]?.message?.content ?? "";
+  const text: string = data.choices?.[0]?.message?.content ?? "";
+  return text.replace(/<think>[\s\S]*?<\/think>/g, "").trim(); // some models inline their reasoning
 }

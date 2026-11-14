@@ -50,7 +50,7 @@ export async function POST(req: Request) {
   if (messages.length > MAX_MESSAGES) return Response.json({ error: "Conversation limit reached. Please start over." }, { status: 400 });
 
   try {
-    const raw = await complete(INTAKE_PROMPT, messages);
+    const raw = await complete(INTAKE_PROMPT, messages, 1500);
     const m = raw.match(/<profile>([\s\S]*?)<\/profile>/);
     const reply = raw.replace(/<profile>[\s\S]*?<\/profile>/, "").trim();
     if (!m) return Response.json({ reply });
@@ -76,8 +76,11 @@ export async function POST(req: Request) {
           })}`,
         },
       ],
-      400,
-    ).catch(() => "");
+      1500, // leave room for models that reason before answering
+    ).catch((e) => {
+      console.error("explain error:", e);
+      return "";
+    });
 
     return Response.json({ reply, profile, results, summary });
   } catch (err) {
