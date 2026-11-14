@@ -1,0 +1,9 @@
+{
+  "year": 2026,
+  "description": "HHS poverty guidelines, 48 contiguous states and DC (annual dollars).",
+  "first_person": 15960,
+  "each_additional_person": 5680,
+  "effective": "2026-01-13",
+  "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
+  "last_verified": "2026-11-14"
+}

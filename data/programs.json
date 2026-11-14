@@ -1,0 +1,203 @@
+{
+  "_note": "Statewide California programs. Income limits are percentages of the HHS poverty guidelines in data/fpl.json. Every program lists its official source and the date we last checked it.",
+  "programs": [
+    {
+      "id": "calfresh",
+      "name": {
+        "en": "CalFresh",
+        "es": "CalFresh"
+      },
+      "category": "food",
+      "summary": {
+        "en": "Monthly money on an EBT card to buy groceries.",
+        "es": "Dinero mensual en una tarjeta EBT para comprar comida."
+      },
+      "rule": {
+        "type": "income_pct_fpl",
+        "pct": 200
+      },
+      "docs_needed": {
+        "en": [
+          "Photo ID",
+          "Proof of income for the last 30 days (pay stubs, award letters)",
+          "Proof of address (lease or utility bill)",
+          "Rent and utility costs",
+          "Social Security numbers (if you have them)"
+        ],
+        "es": [
+          "Identificación con foto",
+          "Comprobante de ingresos de los últimos 30 días (talones de pago, cartas de beneficios)",
+          "Comprobante de domicilio (contrato de renta o recibo de servicios)",
+          "Costos de renta y servicios",
+          "Números de Seguro Social (si los tiene)"
+        ]
+      },
+      "apply_url": "https://benefitscal.com",
+      "source_url": "https://www.cdss.ca.gov/calfresh",
+      "last_verified": "2026-11-14"
+    },
+    {
+      "id": "medi_cal",
+      "name": {
+        "en": "Medi-Cal",
+        "es": "Medi-Cal"
+      },
+      "category": "health",
+      "summary": {
+        "en": "Free or low-cost health coverage: doctor visits, prescriptions, dental and vision.",
+        "es": "Seguro médico gratis o de bajo costo: consultas, medicinas, dental y visión."
+      },
+      "rule": {
+        "type": "medi_cal",
+        "adult_pct": 138,
+        "child_pct": 266,
+        "pregnant_pct": 213
+      },
+      "docs_needed": {
+        "en": [
+          "Photo ID",
+          "Proof of income (pay stubs or tax return)",
+          "Proof of California address",
+          "Social Security numbers (if you have them)",
+          "Immigration documents (if they apply)"
+        ],
+        "es": [
+          "Identificación con foto",
+          "Comprobante de ingresos (talones de pago o declaración de impuestos)",
+          "Comprobante de domicilio en California",
+          "Números de Seguro Social (si los tiene)",
+          "Documentos de inmigración (si aplican)"
+        ]
+      },
+      "apply_url": "https://benefitscal.com",
+      "source_url": "https://www.dhcs.ca.gov/services/medi-cal/Pages/DoYouQualifyForMedi-Cal.aspx",
+      "last_verified": "2026-11-14"
+    },
+    {
+      "id": "wic",
+      "name": {
+        "en": "WIC",
+        "es": "WIC"
+      },
+      "category": "food",
+      "summary": {
+        "en": "Healthy food, formula and nutrition support for pregnant people and children under 5.",
+        "es": "Comida saludable, fórmula y apoyo de nutrición para embarazadas y niños menores de 5 años."
+      },
+      "rule": {
+        "type": "wic",
+        "pct": 185
+      },
+      "docs_needed": {
+        "en": [
+          "Photo ID for parent or guardian",
+          "Proof of income, or proof of Medi-Cal/CalFresh",
+          "Proof of address",
+          "Child's immunization record (if applying for a child)"
+        ],
+        "es": [
+          "Identificación con foto del padre o tutor",
+          "Comprobante de ingresos, o comprobante de Medi-Cal/CalFresh",
+          "Comprobante de domicilio",
+          "Cartilla de vacunas del niño (si aplica para un niño)"
+        ]
+      },
+      "apply_url": "https://myfamily.wic.ca.gov",
+      "source_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08323/special-supplemental-nutrition-program-for-women-infants-and-children-wic-20262027-income",
+      "last_verified": "2026-11-14"
+    },
+    {
+      "id": "care",
+      "name": {
+        "en": "CARE (utility discount)",
+        "es": "CARE (descuento en servicios)"
+      },
+      "category": "utilities",
+      "summary": {
+        "en": "32.5% off SCE electric bills, plus a discount on SoCalGas gas bills.",
+        "es": "32.5% de descuento en la luz de SCE, más un descuento en el gas de SoCalGas."
+      },
+      "rule": {
+        "type": "income_pct_fpl_annual",
+        "pct": 200,
+        "min_household": 2
+      },
+      "docs_needed": {
+        "en": [
+          "Your utility account number",
+          "Household size and total income (proof only if asked)"
+        ],
+        "es": [
+          "Su número de cuenta de luz o gas",
+          "Tamaño del hogar e ingreso total (comprobante solo si se lo piden)"
+        ]
+      },
+      "apply_url": "https://www.sce.com/carefera",
+      "source_url": "https://www.cpuc.ca.gov/care",
+      "last_verified": "2026-11-14"
+    },
+    {
+      "id": "fera",
+      "name": {
+        "en": "FERA (utility discount)",
+        "es": "FERA (descuento en servicios)"
+      },
+      "category": "utilities",
+      "summary": {
+        "en": "18% off SCE electric bills for households earning a bit too much for CARE.",
+        "es": "18% de descuento en la luz de SCE para hogares que ganan un poco más del límite de CARE."
+      },
+      "rule": {
+        "type": "income_band_pct_fpl_annual",
+        "above_pct": 200,
+        "max_pct": 250,
+        "min_household": 2
+      },
+      "docs_needed": {
+        "en": [
+          "Your SCE account number",
+          "Household size and total income (proof only if asked)"
+        ],
+        "es": [
+          "Su número de cuenta de SCE",
+          "Tamaño del hogar e ingreso total (comprobante solo si se lo piden)"
+        ]
+      },
+      "apply_url": "https://www.sce.com/carefera",
+      "source_url": "https://www.cpuc.ca.gov/care",
+      "last_verified": "2026-11-14"
+    },
+    {
+      "id": "lifeline",
+      "name": {
+        "en": "California LifeLine",
+        "es": "California LifeLine"
+      },
+      "category": "phone",
+      "summary": {
+        "en": "Discounted home or cell phone service. You can qualify by being on CalFresh or Medi-Cal.",
+        "es": "Servicio de teléfono fijo o celular con descuento. Puede calificar si recibe CalFresh o Medi-Cal."
+      },
+      "rule": {
+        "type": "follows_programs",
+        "programs": [
+          "calfresh",
+          "medi_cal"
+        ]
+      },
+      "docs_needed": {
+        "en": [
+          "Proof you receive CalFresh or Medi-Cal (benefit letter or card)",
+          "Photo ID"
+        ],
+        "es": [
+          "Comprobante de que recibe CalFresh o Medi-Cal (carta o tarjeta de beneficios)",
+          "Identificación con foto"
+        ]
+      },
+      "apply_url": "https://www.californialifeline.com",
+      "source_url": "https://www.cpuc.ca.gov/lifeline",
+      "last_verified": "2026-11-14"
+    }
+  ]
+}
