@@ -2,7 +2,7 @@
 
 **Find public benefits your family may qualify for in five minutes, in English or Spanish.**
 
-Many families in Southern California qualify for help with food, health care and utility bills but never apply. Program rules are confusing, information is scattered across state, county and utility websites, and language is a barrier. BenefitBridge lets someone describe their situation in plain language. It returns the programs they likely qualify for, the documents to bring, and local help in their county.
+Many families in Southern California qualify for help with food, health care, utility bills, child care and tax credits but never apply. Program rules are confusing, information is scattered across state, county and utility websites, and language is a barrier. BenefitBridge lets someone describe their situation in plain language. It returns the programs they likely qualify for, the documents to bring, and local help in their county.
 
 Covers **Los Angeles, Orange, Riverside and San Bernardino** counties. Built for **HackGlobal 2026** (Civic and real-world impact track).
 
@@ -41,6 +41,10 @@ Covers **Los Angeles, Orange, Riverside and San Bernardino** counties. Built for
 | CARE | 32.5% off SCE electric + gas discount | Annual income ≤ 200% FPL |
 | FERA | 18% off SCE electric | 200–250% FPL |
 | California LifeLine | Discounted phone service | Enrolled in CalFresh or Medi-Cal |
+| Free school meals | Breakfast + lunch at public schools | Any child aged 5–18 (California Universal Meals) |
+| Head Start / Early Head Start | Free preschool for kids under 5 | ≤ 100% FPL, or on CalFresh |
+| CalEITC | California tax credit, up to $3,756 | Work income ≤ $32,900 (tax year 2025) |
+| Federal EITC | IRS tax credit, up to $8,046 | Work income under the IRS limit for the number of children (tax year 2025) |
 
 Poverty line: 2026 HHS guidelines ($15,960 for one person + $5,680 per additional person). Sources and dates are listed in `data/programs.json` and `data/fpl.json`.
 
@@ -96,4 +100,4 @@ BenefitBridge gives estimates based on official income limits. It is not an appl
 
 ## Credits
 
-Built with [Next.js](https://nextjs.org), [React](https://react.dev), [Tailwind CSS](https://tailwindcss.com), the [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-typescript), [Vultr](https://www.vultr.com) Cloud Compute and Serverless Inference. AI coding tools were used during development. Program rules come from CDSS, DHCS, USDA (WIC), CPUC and HHS. County resources come from official county and food bank sites.
+Built with [Next.js](https://nextjs.org), [React](https://react.dev), [Tailwind CSS](https://tailwindcss.com), the [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-typescript), [Vultr](https://www.vultr.com) Cloud Compute and Serverless Inference. AI coding tools were used during development. Program rules come from CDSS, DHCS, USDA (WIC), CPUC, HHS, the California Department of Education, the Office of Head Start, the Franchise Tax Board and the IRS. County resources come from official county, food bank and legal aid sites.
