@@ -31,6 +31,7 @@ const T = {
     helpline: "Free help line",
     legal: "Free legal help",
     restart: "Start over",
+    print: "Print or save as PDF",
     disclaimer:
       "These are estimates based on official income limits, not a decision. The agency makes the final decision.",
     people: (n: number) => `${n} ${n === 1 ? "person" : "people"}`,
@@ -63,6 +64,7 @@ const T = {
     helpline: "Línea de ayuda gratis",
     legal: "Ayuda legal gratis",
     restart: "Empezar de nuevo",
+    print: "Imprimir o guardar PDF",
     disclaimer:
       "Son estimaciones basadas en límites oficiales de ingreso, no una decisión. La agencia toma la decisión final.",
     people: (n: number) => `${n} ${n === 1 ? "persona" : "personas"}`,
@@ -151,7 +153,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-dvh flex-col">
-      <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <header className="print:hidden sticky top-0 z-10 border-b border-slate-200 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-3">
           <button onClick={restart} className="flex items-center gap-2">
             <Logo />
@@ -299,12 +301,20 @@ export default function Home() {
             </div>
 
             <p className="text-xs leading-relaxed text-slate-500">{t.disclaimer}</p>
-            <button
-              onClick={restart}
-              className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
-            >
-              {t.restart}
-            </button>
+            <div className="flex flex-wrap gap-2 print:hidden">
+              <button
+                onClick={() => window.print()}
+                className="rounded-lg bg-teal-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-teal-800"
+              >
+                {t.print}
+              </button>
+              <button
+                onClick={restart}
+                className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
+              >
+                {t.restart}
+              </button>
+            </div>
           </section>
         )}
         <div ref={bottom} />
