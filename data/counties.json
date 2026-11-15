@@ -3,47 +3,126 @@
   "counties": {
     "los_angeles": {
       "name": "Los Angeles County",
-      "benefits_office": { "name": "LA County Department of Public Social Services (DPSS)", "url": "https://dpss.lacounty.gov" },
-      "food_bank": { "name": "Los Angeles Regional Food Bank", "url": "https://www.lafoodbank.org" },
+      "benefits_office": {
+        "name": "LA County Department of Public Social Services (DPSS)",
+        "url": "https://dpss.lacounty.gov"
+      },
+      "food_bank": {
+        "name": "Los Angeles Regional Food Bank",
+        "url": "https://www.lafoodbank.org"
+      },
       "utilities": [
-        { "name": "Southern California Edison (SCE)", "url": "https://www.sce.com/carefera" },
-        { "name": "SoCalGas", "url": "https://www.socalgas.com" },
-        { "name": "LADWP (City of LA, has its own low-income discount)", "url": "https://www.ladwp.com" }
+        {
+          "name": "Southern California Edison (SCE)",
+          "url": "https://www.sce.com/carefera"
+        },
+        {
+          "name": "SoCalGas",
+          "url": "https://www.socalgas.com"
+        },
+        {
+          "name": "LADWP (City of LA, has its own low-income discount)",
+          "url": "https://www.ladwp.com"
+        }
       ],
-      "helpline": { "name": "211 LA", "url": "https://www.211la.org" },
+      "helpline": {
+        "name": "211 LA",
+        "url": "https://www.211la.org"
+      },
+      "legal_aid": {
+        "name": "Legal Aid Foundation of Los Angeles (LAFLA)",
+        "url": "https://www.lafla.org"
+      },
       "last_verified": "2026-11-14"
     },
     "orange": {
       "name": "Orange County",
-      "benefits_office": { "name": "Orange County Social Services Agency (SSA)", "url": "https://www.ssa.ocgov.com" },
-      "food_bank": { "name": "Second Harvest Food Bank of Orange County", "url": "https://feedoc.org" },
+      "benefits_office": {
+        "name": "Orange County Social Services Agency (SSA)",
+        "url": "https://www.ssa.ocgov.com"
+      },
+      "food_bank": {
+        "name": "Second Harvest Food Bank of Orange County",
+        "url": "https://feedoc.org"
+      },
       "utilities": [
-        { "name": "Southern California Edison (SCE)", "url": "https://www.sce.com/carefera" },
-        { "name": "SoCalGas", "url": "https://www.socalgas.com" }
+        {
+          "name": "Southern California Edison (SCE)",
+          "url": "https://www.sce.com/carefera"
+        },
+        {
+          "name": "SoCalGas",
+          "url": "https://www.socalgas.com"
+        }
       ],
-      "helpline": { "name": "211 Orange County", "url": "https://www.211oc.org" },
+      "helpline": {
+        "name": "211 Orange County",
+        "url": "https://www.211oc.org"
+      },
+      "legal_aid": {
+        "name": "Community Legal Aid SoCal",
+        "url": "https://www.communitylegalsocal.org"
+      },
       "last_verified": "2026-11-14"
     },
     "riverside": {
       "name": "Riverside County",
-      "benefits_office": { "name": "Riverside County Department of Public Social Services (DPSS)", "url": "https://rivcodpss.org" },
-      "food_bank": { "name": "Feeding America Riverside | San Bernardino", "url": "https://www.feedingamericaie.org" },
+      "benefits_office": {
+        "name": "Riverside County Department of Public Social Services (DPSS)",
+        "url": "https://rivcodpss.org"
+      },
+      "food_bank": {
+        "name": "Feeding America Riverside | San Bernardino",
+        "url": "https://www.feedingamericaie.org"
+      },
       "utilities": [
-        { "name": "Southern California Edison (SCE)", "url": "https://www.sce.com/carefera" },
-        { "name": "SoCalGas", "url": "https://www.socalgas.com" }
+        {
+          "name": "Southern California Edison (SCE)",
+          "url": "https://www.sce.com/carefera"
+        },
+        {
+          "name": "SoCalGas",
+          "url": "https://www.socalgas.com"
+        }
       ],
-      "helpline": { "name": "Dial 2-1-1", "url": null },
+      "helpline": {
+        "name": "Dial 2-1-1",
+        "url": null
+      },
+      "legal_aid": {
+        "name": "Inland Counties Legal Services",
+        "url": "https://www.inlandlegal.org"
+      },
       "last_verified": "2026-11-14"
     },
     "san_bernardino": {
       "name": "San Bernardino County",
-      "benefits_office": { "name": "San Bernardino County Transitional Assistance Department (TAD)", "url": "https://hss.sbcounty.gov/tad" },
-      "food_bank": { "name": "Feeding America Riverside | San Bernardino", "url": "https://www.feedingamericaie.org" },
+      "benefits_office": {
+        "name": "San Bernardino County Transitional Assistance Department (TAD)",
+        "url": "https://hss.sbcounty.gov/tad"
+      },
+      "food_bank": {
+        "name": "Feeding America Riverside | San Bernardino",
+        "url": "https://www.feedingamericaie.org"
+      },
       "utilities": [
-        { "name": "Southern California Edison (SCE)", "url": "https://www.sce.com/carefera" },
-        { "name": "SoCalGas", "url": "https://www.socalgas.com" }
+        {
+          "name": "Southern California Edison (SCE)",
+          "url": "https://www.sce.com/carefera"
+        },
+        {
+          "name": "SoCalGas",
+          "url": "https://www.socalgas.com"
+        }
       ],
-      "helpline": { "name": "211 San Bernardino County", "url": "https://211sb.org" },
+      "helpline": {
+        "name": "211 San Bernardino County",
+        "url": "https://211sb.org"
+      },
+      "legal_aid": {
+        "name": "Inland Counties Legal Services",
+        "url": "https://www.inlandlegal.org"
+      },
       "last_verified": "2026-11-14"
     }
   }
