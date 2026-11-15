@@ -2,7 +2,17 @@
 
 **Find public benefits your family may qualify for in five minutes, in English or Spanish.**
 
-**Live demo (hosted on Vultr):** http://45.63.51.58
+**Demo video:** https://youtu.be/sSliQb_lRpw
+
+The live demo ran on Vultr at http://45.63.51.58 during HackGlobal 2026 and has since been shut down. See [Deploy on Vultr](#deploy-on-vultr) to run your own.
+
+## Screenshots
+
+| Start (English) | Results (English) |
+|---|---|
+| ![Start screen in English](docs/screenshots/home-en.png) | ![Results in English](docs/screenshots/results-en.png) |
+| **Start (Español)** | **Results (Español)** |
+| ![Start screen in Spanish](docs/screenshots/home-es.png) | ![Results in Spanish](docs/screenshots/results-es.png) |
 
 Many families in Southern California qualify for help with food, health care, utility bills, child care and tax credits but never apply. Program rules are confusing, information is scattered across state, county and utility websites, and language is a barrier. BenefitBridge lets someone describe their situation in plain language. It returns the programs they likely qualify for, the documents to bring, and local help in their county.
 
