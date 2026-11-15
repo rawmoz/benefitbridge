@@ -8,6 +8,8 @@ Covers **Los Angeles, Orange, Riverside and San Bernardino** counties. Built for
 
 ## How it works
 
+![Architecture](docs/architecture.png)
+
 ```
  User (phone or laptop, EN/ES)
         │  chat
