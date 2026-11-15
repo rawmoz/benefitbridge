@@ -29,13 +29,14 @@ const T = {
     food: "Food bank",
     utilities: "Utilities",
     helpline: "Free help line",
+    legal: "Free legal help",
     restart: "Start over",
     disclaimer:
       "These are estimates based on official income limits, not a decision. The agency makes the final decision.",
     people: (n: number) => `${n} ${n === 1 ? "person" : "people"}`,
     perMonth: "/month",
     fpl: "of poverty line",
-    cats: { food: "Food", health: "Health", utilities: "Utilities", phone: "Phone" },
+    cats: { food: "Food", health: "Health", utilities: "Utilities", phone: "Phone", family: "Kids & family", money: "Tax credit" },
     footer: "Estimates only. Rules from official state and federal sources, checked Nov 2026.",
   },
   es: {
@@ -60,20 +61,25 @@ const T = {
     food: "Banco de comida",
     utilities: "Servicios (luz y gas)",
     helpline: "Línea de ayuda gratis",
+    legal: "Ayuda legal gratis",
     restart: "Empezar de nuevo",
     disclaimer:
       "Son estimaciones basadas en límites oficiales de ingreso, no una decisión. La agencia toma la decisión final.",
     people: (n: number) => `${n} ${n === 1 ? "persona" : "personas"}`,
     perMonth: "/mes",
     fpl: "del nivel de pobreza",
-    cats: { food: "Comida", health: "Salud", utilities: "Servicios", phone: "Teléfono" },
+    cats: { food: "Comida", health: "Salud", utilities: "Servicios", phone: "Teléfono", family: "Niños y familia", money: "Crédito de impuestos" },
     footer: "Solo estimaciones. Reglas de fuentes oficiales estatales y federales, revisadas en nov. 2026.",
   },
 };
 
-const CATEGORY: Record<string, "food" | "health" | "utilities" | "phone"> = {
+const CATEGORY: Record<string, "food" | "health" | "utilities" | "phone" | "family" | "money"> = {
   calfresh: "food",
   wic: "food",
+  school_meals: "food",
+  head_start: "family",
+  caleitc: "money",
+  federal_eitc: "money",
   medi_cal: "health",
   care: "utilities",
   fera: "utilities",
@@ -85,6 +91,8 @@ const CAT_STYLE = {
   health: "bg-sky-50 text-sky-800 ring-sky-200",
   utilities: "bg-violet-50 text-violet-800 ring-violet-200",
   phone: "bg-slate-100 text-slate-700 ring-slate-200",
+  family: "bg-rose-50 text-rose-800 ring-rose-200",
+  money: "bg-emerald-50 text-emerald-800 ring-emerald-200",
 };
 
 export default function Home() {
@@ -285,6 +293,7 @@ export default function Home() {
                 <Row label={t.office} items={[results.county.benefits_office]} />
                 <Row label={t.food} items={[results.county.food_bank]} />
                 <Row label={t.utilities} items={results.county.utilities} />
+                <Row label={t.legal} items={[results.county.legal_aid]} />
                 <Row label={t.helpline} items={[results.county.helpline]} />
               </dl>
             </div>
