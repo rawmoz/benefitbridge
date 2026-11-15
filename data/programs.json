@@ -107,6 +107,70 @@
       "last_verified": "2026-11-14"
     },
     {
+      "id": "school_meals",
+      "name": {
+        "en": "Free school meals",
+        "es": "Comidas escolares gratis"
+      },
+      "category": "food",
+      "summary": {
+        "en": "Free breakfast and lunch every school day for all public school students in California, at any income.",
+        "es": "Desayuno y almuerzo gratis cada día escolar para todos los estudiantes de escuelas públicas de California, sin importar el ingreso."
+      },
+      "rule": {
+        "type": "school_age_children"
+      },
+      "docs_needed": {
+        "en": [
+          "Nothing to apply: meals are free for every public school student",
+          "Tip: still fill out your school's meal or income form, it can bring extra funding and benefits"
+        ],
+        "es": [
+          "No necesita solicitar: las comidas son gratis para todo estudiante de escuela pública",
+          "Consejo: llene el formulario de ingresos de la escuela, puede traer más fondos y beneficios"
+        ]
+      },
+      "apply_url": "https://www.cde.ca.gov/ls/nu/univmealsfaq.asp",
+      "source_url": "https://www.cde.ca.gov/ls/nu/sn/cauniversalmeals.asp",
+      "last_verified": "2026-11-14"
+    },
+    {
+      "id": "head_start",
+      "name": {
+        "en": "Head Start / Early Head Start",
+        "es": "Head Start / Early Head Start"
+      },
+      "category": "family",
+      "summary": {
+        "en": "Free preschool and early learning for children under 5, plus health and family support.",
+        "es": "Preescolar y aprendizaje temprano gratis para niños menores de 5 años, más apoyo de salud y familia."
+      },
+      "rule": {
+        "type": "head_start",
+        "pct": 100,
+        "via_programs": [
+          "calfresh"
+        ]
+      },
+      "docs_needed": {
+        "en": [
+          "Child's birth certificate",
+          "Proof of income (pay stubs or tax return), or your CalFresh case number",
+          "Child's immunization record",
+          "Proof of address"
+        ],
+        "es": [
+          "Acta de nacimiento del niño",
+          "Comprobante de ingresos (talones o declaración de impuestos), o su número de caso de CalFresh",
+          "Registro de vacunas del niño",
+          "Comprobante de domicilio"
+        ]
+      },
+      "apply_url": "https://headstart.gov/center-locator",
+      "source_url": "https://headstart.gov/policy/im/acf-im-hs-22-03",
+      "last_verified": "2026-11-14"
+    },
+    {
       "id": "care",
       "name": {
         "en": "CARE (utility discount)",
@@ -197,6 +261,79 @@
       },
       "apply_url": "https://www.californialifeline.com",
       "source_url": "https://www.cpuc.ca.gov/lifeline",
+      "last_verified": "2026-11-14"
+    },
+    {
+      "id": "caleitc",
+      "name": {
+        "en": "CalEITC (California tax credit)",
+        "es": "CalEITC (crédito de impuestos de California)"
+      },
+      "category": "money",
+      "summary": {
+        "en": "Cash back when you file your state taxes if you earn money from work. Up to $3,756 for tax year 2025.",
+        "es": "Dinero de vuelta al declarar impuestos estatales si gana dinero trabajando. Hasta $3,756 por el año fiscal 2025."
+      },
+      "rule": {
+        "type": "work_income_annual",
+        "max": 32900,
+        "tax_year": 2025
+      },
+      "docs_needed": {
+        "en": [
+          "W-2s or 1099s (proof of work income)",
+          "Social Security number or ITIN for everyone on the return",
+          "Children's birth certificates or school records (if claiming children)",
+          "Free tax help: VITA sites or CalFile"
+        ],
+        "es": [
+          "Formularios W-2 o 1099 (comprobante de ingresos de trabajo)",
+          "Número de Seguro Social o ITIN de cada persona en la declaración",
+          "Actas de nacimiento o registros escolares de los niños (si los incluye)",
+          "Ayuda gratis con impuestos: sitios VITA o CalFile"
+        ]
+      },
+      "apply_url": "https://www.caleitc4me.org",
+      "source_url": "https://www.ftb.ca.gov/file/personal/credits/california-earned-income-tax-credit.html",
+      "last_verified": "2026-11-14"
+    },
+    {
+      "id": "federal_eitc",
+      "name": {
+        "en": "Federal EITC (tax credit)",
+        "es": "EITC federal (crédito de impuestos)"
+      },
+      "category": "money",
+      "summary": {
+        "en": "Cash back from the IRS when you file taxes if you work. Up to $8,046 for families with 3+ children (tax year 2025).",
+        "es": "Dinero de vuelta del IRS al declarar impuestos si trabaja. Hasta $8,046 para familias con 3 o más niños (año fiscal 2025)."
+      },
+      "rule": {
+        "type": "eitc",
+        "tax_year": 2025,
+        "limits_by_children": [
+          19104,
+          50434,
+          57310,
+          61555
+        ]
+      },
+      "docs_needed": {
+        "en": [
+          "W-2s or 1099s (proof of work income)",
+          "Social Security numbers for you, your spouse and each child",
+          "Children's birth certificates or school records",
+          "Free tax help: IRS VITA sites"
+        ],
+        "es": [
+          "Formularios W-2 o 1099 (comprobante de ingresos de trabajo)",
+          "Números de Seguro Social suyos, de su pareja y de cada niño",
+          "Actas de nacimiento o registros escolares de los niños",
+          "Ayuda gratis con impuestos: sitios VITA del IRS"
+        ]
+      },
+      "apply_url": "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+      "source_url": "https://www.irs.gov/credits-deductions/individuals/earned-income-tax-credit/eitc-income-limits-maximum-credit-amounts",
       "last_verified": "2026-11-14"
     }
   ]

@@ -24,7 +24,11 @@ type Rule =
   | { type: "income_band_pct_fpl_annual"; above_pct: number; max_pct: number; min_household?: number }
   | { type: "medi_cal"; adult_pct: number; child_pct: number; pregnant_pct: number }
   | { type: "wic"; pct: number }
-  | { type: "follows_programs"; programs: string[] };
+  | { type: "follows_programs"; programs: string[] }
+  | { type: "school_age_children" }
+  | { type: "head_start"; pct: number; via_programs: string[] }
+  | { type: "work_income_annual"; max: number; tax_year: number }
+  | { type: "eitc"; tax_year: number; limits_by_children: number[] };
 
 type Program = (typeof programsData.programs)[number] & { rule: Rule };
 
@@ -104,6 +108,38 @@ function check(rule: Rule, p: Profile, matched: Set<string>, lang: Lang): string
       return es
         ? "Puede calificar automáticamente al estar inscrito en CalFresh o Medi-Cal."
         : "You can qualify automatically once enrolled in CalFresh or Medi-Cal.";
+    }
+    case "school_age_children": {
+      const kids = p.children_under_19 - p.children_under_5;
+      if (kids <= 0) return null;
+      return es
+        ? `Hay ${kids} niño(s) en edad escolar. En California, todo estudiante de escuela pública recibe desayuno y almuerzo gratis.`
+        : `You have ${kids} school-age child(ren). In California every public school student gets free breakfast and lunch.`;
+    }
+    case "head_start": {
+      if (p.children_under_5 === 0) return null;
+      const limit = monthlyLimit(rule.pct);
+      const viaProgram = rule.via_programs.some((id) => matched.has(id));
+      if (!viaProgram && p.monthly_income > limit) return null;
+      return es
+        ? `Hay niños menores de 5 y el ingreso está bajo la línea de pobreza (${money(limit)}/mes) o califica por CalFresh.`
+        : `You have a child under 5 and income is under the poverty line (${money(limit)}/month) or qualifies through CalFresh.`;
+    }
+    case "work_income_annual": {
+      const annual = p.monthly_income * 12;
+      if (annual <= 0 || annual > rule.max) return null;
+      return es
+        ? `Si este ingreso es de trabajo, ${money(annual)} al año está bajo el límite de ${money(rule.max)} (año fiscal ${rule.tax_year}).`
+        : `If this income is from work, ${money(annual)} a year is under the ${money(rule.max)} limit (tax year ${rule.tax_year}).`;
+    }
+    case "eitc": {
+      const annual = p.monthly_income * 12;
+      const kids = Math.min(p.children_under_19, rule.limits_by_children.length - 1);
+      const limit = rule.limits_by_children[kids];
+      if (annual <= 0 || annual > limit) return null;
+      return es
+        ? `Si este ingreso es de trabajo, ${money(annual)} al año está bajo el límite de ${money(limit)} con ${kids} niño(s) (año fiscal ${rule.tax_year}; parejas casadas tienen un límite más alto).`
+        : `If this income is from work, ${money(annual)} a year is under the ${money(limit)} limit with ${kids} child(ren) (tax year ${rule.tax_year}; married couples have a higher limit).`;
     }
   }
 }
