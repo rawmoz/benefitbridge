@@ -2,6 +2,8 @@
 
 **Find public benefits your family may qualify for in five minutes, in English or Spanish.**
 
+**Live demo (hosted on Vultr):** http://45.63.51.58
+
 Many families in Southern California qualify for help with food, health care, utility bills, child care and tax credits but never apply. Program rules are confusing, information is scattered across state, county and utility websites, and language is a barrier. BenefitBridge lets someone describe their situation in plain language. It returns the programs they likely qualify for, the documents to bring, and local help in their county.
 
 Covers **Los Angeles, Orange, Riverside and San Bernardino** counties. Built for **HackGlobal 2026** (Civic and real-world impact track).
